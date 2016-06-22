@@ -26,6 +26,7 @@ public class MainActivity extends AppCompatActivity {
         System.out.println(drawDeck.toString());
 
         // draw initial hands
+        //PICKLE DAFIAJNFOIJEOFIJOEIJFOISJAE
 
     }
 
