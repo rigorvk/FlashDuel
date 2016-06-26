@@ -1,7 +1,5 @@
 package com.example.bjorn.flashduel;
 
-import java.util.ArrayList;
-
 /**
  * Created by Bjorn on 6/12/2016.
  */
@@ -15,10 +13,10 @@ public class Player {
     private int numLosses;
     private Hand hand;
 
-
     /** methods **/
     public void drawCard(Deck drawDeck){
-        //hand.addcardtohand(deck.giveTopCard())
+        hand.addCardToHand(drawDeck.giveTopCard());
+        //
     }
 
     public void discardCard(Deck discardPile){
@@ -27,8 +25,9 @@ public class Player {
     }
 
     public void drawUp(Deck drawDeck){
-        //loop: check hand size, draw up to 5
-        //use drawCard method
+        while (hand.getHandSize() < 5) {
+            drawCard(drawDeck);
+        }
     }
 
     public static Player createNewPlayer(String name, String displayName, int position){
@@ -40,26 +39,29 @@ public class Player {
         this.name = name;
         this.displayName = displayName;
         this.position = position;
+        this.isActive = false;
         this.numWins = numWins;
         this.numLosses = numLosses;
-        this.hand = new Hand("stuff");
+        this.hand = new Hand("hand_".concat(this.name));
     }
 
     private Player(String name, String displayName, int position) {
         this.name = name;
         this.displayName = displayName;
         this.position = position;
+        this.isActive = false;
         this.numWins = 0;
         this.numLosses = 0;
-        this.hand = new Hand("stuff");
+        this.hand = new Hand("hand_".concat(this.name));
     }
 
     private Player() {
         this.name = "defaultname";
         this.displayName = "Default Name";
+        this.isActive = false;
         this.numWins = 0;
         this.numLosses = 0;
-        this.hand = new Hand("stuff");
+        this.hand = new Hand("hand_".concat(this.name));
     }
 
     /** getters and setters **/
@@ -88,6 +90,10 @@ public class Player {
         this.numLosses = numLosses;
     }
 
+    public int getHandSize() {
+        return hand.getHandSize();
+    }
+
     /** toString **/
     @Override public String toString() {
         StringBuilder result = new StringBuilder();
@@ -98,6 +104,8 @@ public class Player {
         result.append("    Name (display): " + this.displayName + NEW_LINE);
         result.append("    Position: " + this.position + NEW_LINE );
         result.append("    Is Active?: " + this.isActive + NEW_LINE);
+        result.append("    Hand Size: " + this.hand.getHandSize() + NEW_LINE);
+        result.append("    Hand: " + this.hand + NEW_LINE);
         result.append("    # of wins: " + this.numWins + NEW_LINE);
         result.append("    # of losses: " + this.numLosses + NEW_LINE);
         result.append("}");

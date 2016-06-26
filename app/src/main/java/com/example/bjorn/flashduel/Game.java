@@ -15,7 +15,7 @@ public class Game {
 
     }
 
-    private void setupNewGame(){
+    public Game(){
 
         // make two players
         player1 = Player.createNewPlayer("player1", "Player 1", 1);
@@ -26,12 +26,16 @@ public class Game {
         // make the decks
         drawDeck = Deck.makeNewDrawDeck();
         discardPile = Deck.makeNewDiscardPile();
-        System.out.println(drawDeck.toString());
-        System.out.println(discardPile.toString());
+        // System.out.println(drawDeck.toString());
+        // System.out.println(discardPile.toString());
 
         // draw initial hands
+        player1.drawUp(drawDeck);
+        player2.drawUp(drawDeck);
+        System.out.println(player1.toString());
+        System.out.println(player2.toString());
+        System.out.println(drawDeck.toString());
 
     }
-
 
 }

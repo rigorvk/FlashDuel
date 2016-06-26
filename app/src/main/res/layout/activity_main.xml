@@ -306,7 +306,7 @@
                         android:layout_height="match_parent"
                         android:gravity="center"
                         android:textSize="12pt"
-                        android:text="1"
+                        android:text="X"
                         />
                     <TextView
                         android:layout_weight="1"
@@ -314,7 +314,7 @@
                         android:layout_height="match_parent"
                         android:gravity="center"
                         android:textSize="12pt"
-                        android:text="2"
+                        android:text="X"
                         />
                     <TextView
                         android:layout_weight="1"
@@ -322,7 +322,7 @@
                         android:layout_height="match_parent"
                         android:gravity="center"
                         android:textSize="12pt"
-                        android:text="3"
+                        android:text="X"
                         />
                     <TextView
                         android:layout_weight="1"
@@ -330,7 +330,7 @@
                         android:layout_height="match_parent"
                         android:gravity="center"
                         android:textSize="12pt"
-                        android:text="4"
+                        android:text="X"
                         />
                     <TextView
                         android:layout_weight="1"
@@ -338,7 +338,7 @@
                         android:layout_height="match_parent"
                         android:gravity="center"
                         android:textSize="12pt"
-                        android:text="5"
+                        android:text="X"
                         />
                 </LinearLayout>
 
@@ -461,7 +461,7 @@
                         android:layout_height="match_parent"
                         android:gravity="center"
                         android:textSize="12pt"
-                        android:text="1"
+                        android:text="X"
                         />
                     <TextView
                         android:layout_weight="1"
@@ -469,7 +469,7 @@
                         android:layout_height="match_parent"
                         android:gravity="center"
                         android:textSize="12pt"
-                        android:text="2"
+                        android:text="X"
                         />
                     <TextView
                         android:layout_weight="1"
@@ -477,7 +477,7 @@
                         android:layout_height="match_parent"
                         android:gravity="center"
                         android:textSize="12pt"
-                        android:text="3"
+                        android:text="X"
                         />
                     <TextView
                         android:layout_weight="1"
@@ -485,7 +485,7 @@
                         android:layout_height="match_parent"
                         android:gravity="center"
                         android:textSize="12pt"
-                        android:text="4"
+                        android:text="X"
                         />
                     <TextView
                         android:layout_weight="1"
@@ -493,7 +493,7 @@
                         android:layout_height="match_parent"
                         android:gravity="center"
                         android:textSize="12pt"
-                        android:text="5"
+                        android:text="X"
                         />
                 </LinearLayout>
 

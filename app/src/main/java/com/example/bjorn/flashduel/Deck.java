@@ -12,17 +12,27 @@ public class Deck {
     private String deckDisplayName;    // display name of the deck
     private ArrayList<Card> cardStack;   // the ordered list of cards in the deck, from the bottom up
 
-    /** deck manipulation methods **/
-    private void addCard(Card card) {
-        cardStack.add(card);
-        card.setLocation(deckName);
-    }
-
+    /** public deck manipulation methods **/
     public Deck shuffleDeck(){
         Collections.shuffle(this.cardStack);
         return this;
     }
 
+    public Card giveTopCard(){
+        int i = getDeckSize()-1; // get index of top card
+        Card cardToReturn = cardStack.get(i); // get top card
+        cardStack.remove(i); // remove top card from deck
+        cardToReturn.setLocation("nowhere");
+        return cardToReturn;
+    }
+
+    /** private deck manipulation methods **/
+    private void addCard(Card card) {
+        cardStack.add(card);
+        card.setLocation(deckName);
+    }
+
+    /** get info **/
     public int getDeckSize(){
         return cardStack.size();
     }
