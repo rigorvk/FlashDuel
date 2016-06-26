@@ -1,5 +1,7 @@
 package com.example.bjorn.flashduel;
 
+import java.util.ArrayList;
+
 /**
  * Created by Bjorn on 6/12/2016.
  */
@@ -11,14 +13,22 @@ public class Player {
     private boolean isActive;
     private int numWins;
     private int numLosses;
+    private Hand hand;
+
 
     /** methods **/
-    public void drawCard(){
-
+    public void drawCard(Deck drawDeck){
+        //hand.addcardtohand(deck.giveTopCard())
     }
 
-    public void discardCard(){
+    public void discardCard(Deck discardPile){
+        //deck.takeDiscardCard(hand.removecardfromhand())
+        //but how to choose which card to discard?
+    }
 
+    public void drawUp(Deck drawDeck){
+        //loop: check hand size, draw up to 5
+        //use drawCard method
     }
 
     public static Player createNewPlayer(String name, String displayName, int position){
@@ -26,13 +36,13 @@ public class Player {
     }
 
     /** private constructors **/
-
     private Player(String name, String displayName, int position, int numWins, int numLosses) {
         this.name = name;
         this.displayName = displayName;
         this.position = position;
         this.numWins = numWins;
         this.numLosses = numLosses;
+        this.hand = new Hand("stuff");
     }
 
     private Player(String name, String displayName, int position) {
@@ -41,6 +51,7 @@ public class Player {
         this.position = position;
         this.numWins = 0;
         this.numLosses = 0;
+        this.hand = new Hand("stuff");
     }
 
     private Player() {
@@ -48,6 +59,7 @@ public class Player {
         this.displayName = "Default Name";
         this.numWins = 0;
         this.numLosses = 0;
+        this.hand = new Hand("stuff");
     }
 
     /** getters and setters **/

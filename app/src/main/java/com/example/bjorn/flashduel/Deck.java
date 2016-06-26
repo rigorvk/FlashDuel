@@ -12,16 +12,22 @@ public class Deck {
     private String deckDisplayName;    // display name of the deck
     private ArrayList<Card> cardStack;   // the ordered list of cards in the deck, from the bottom up
 
+    /** deck manipulation methods **/
     private void addCard(Card card) {
         cardStack.add(card);
         card.setLocation(deckName);
+    }
+
+    public Deck shuffleDeck(){
+        Collections.shuffle(this.cardStack);
+        return this;
     }
 
     public int getDeckSize(){
         return cardStack.size();
     }
 
-    /** called at start of new game **/
+    /** setup methods **/
     public static Deck makeNewDrawDeck(){
 
         Deck newDrawDeck = new Deck("drawdeck", "Draw Deck");
@@ -37,9 +43,8 @@ public class Deck {
         return newDrawDeck;
     }
 
-    public Deck shuffleDeck(){
-        Collections.shuffle(this.cardStack);
-        return this;
+    public static Deck makeNewDiscardPile(){
+        return new Deck("discardpile", "Discard Pile");
     }
 
     /** private constructor **/
