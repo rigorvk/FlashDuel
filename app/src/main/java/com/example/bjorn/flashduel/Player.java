@@ -1,5 +1,7 @@
 package com.example.bjorn.flashduel;
 
+import java.util.ArrayList;
+
 /**
  * Created by Bjorn on 6/12/2016.
  */
@@ -92,6 +94,10 @@ public class Player {
 
     public int getHandSize() {
         return hand.getHandSize();
+    }
+
+    public ArrayList<Integer> getHandAsArrayList(){
+        return hand.getHandAsArrayList();
     }
 
     /** toString **/

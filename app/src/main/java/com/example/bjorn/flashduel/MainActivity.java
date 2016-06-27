@@ -17,6 +17,7 @@ public class MainActivity extends AppCompatActivity {
 
 
         Game game = new Game(vc);
+        game.setUpGame();
     }
 
     private ViewController createViewController(){

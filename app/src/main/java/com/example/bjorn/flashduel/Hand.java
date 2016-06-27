@@ -19,6 +19,18 @@ public class Hand {
         return hand.size();
     }
 
+    public Card getCard(int i){
+        return hand.get(i);
+    }
+
+    public ArrayList<Integer> getHandAsArrayList(){
+        ArrayList<Integer> arrayToReturn = new ArrayList<>();
+        for (int i = 0; i < getHandSize(); i++){
+            arrayToReturn.add(getCard(i).getValue());
+        }
+        return arrayToReturn;
+    }
+
     /** constructor **/
     public Hand(String handName){
         this.handName = handName;

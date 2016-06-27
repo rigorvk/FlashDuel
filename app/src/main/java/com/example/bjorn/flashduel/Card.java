@@ -18,6 +18,10 @@ public class Card {
         return new Card(id, name, value);
     }
 
+    public int getValue(){
+        return this.value;
+    }
+
     /** constructor, no location **/
     private Card(int id, String name, int value) {
         this.id = id;

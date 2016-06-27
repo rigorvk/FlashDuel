@@ -21,8 +21,8 @@ public class ViewController {
         return (TextView) views.get(textViewName);
     }
 
-    public void setTextOfView(String viewName,String text){
-        getTextView(viewName).setText(text);
+    public void setTextOfView(String textViewName,String text){
+        getTextView(textViewName).setText(text);
     }
 
     /** constructor **/
